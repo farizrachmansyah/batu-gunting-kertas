@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Game v1.7</title>
+        <link rel="stylesheet" href="game.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <section class="game">
+            <!-- <img class="bg-img" src="./assets/background-img.jpg" alt="" /> -->
+            <div class="score">
+                <div class="player-score">
+                    <h1>PLAYER</h1>
+                    <p>0</p>
+                </div>
+                <div class="computer-score">
+                    <h1>COMPUTER</h1>
+                    <p>0</p>
+                </div>
+            </div>
+
+            <div class="opening">
+                <h1>Batu Gunting Kertas</h1>
+                <button>Mulai</button>
+            </div>
+
+            <div class="match fadeOut">
+                <h2 class="winner">Pilih salah satu</h2>
+                <div class="hands">
+                    <img
+                        class="player-hand"
+                        src="./assets/batu-gunting-kertas/batu.png"
+                        alt="gambar"
+                    />
+                    <img
+                        class="computer-hand"
+                        src="./assets/batu-gunting-kertas/batu.png"
+                        alt="gambar"
+                    />
+                </div>
+                <div class="gameBtn">
+                    <div class="options">
+                        <button class="batu">Batu</button>
+                        <button class="gunting">Gunting</button>
+                        <button class="kertas">Kertas</button>
+                    </div>
+                    <div class="restart">
+                        <button>Restart Game</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>created by Aiz with &hearts; from Cilangkap</p>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="game.js"></script>
+    </body>
+</html>

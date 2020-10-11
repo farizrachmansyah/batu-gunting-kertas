@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffeecf;
+}
+
+section {
+    height: 100vh;
+    font-family: sans-serif;
+    color: #3f3d56;
+    background: url("./assets/bg.svg");
+    background-position: 5% 90%;
+    background-repeat: no-repeat;
+    background-size: 50vh;
+}
+
+/* section .bg-img {
+    position: absolute;
+    z-index: -1;
+    filter: blur(3px) brightness(60%);
+    width: 100vw;
+    height: 100vh;
+} */
+
+button {
+    font-weight: 700;
+    color: white;
+    height: 50px;
+    background-color: #f86d70;
+    border: none;
+    font-size: 22px;
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/********************** SCORE SECTION **********************/
+
+.score {
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateY(-150px);
+    transition: all 1s ease;
+}
+
+.score h1 {
+    font-size: 30px;
+}
+
+.score p {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.player-score,
+.computer-score {
+    text-shadow: 2px 2px 3px #f86d70;
+}
+
+/********************** OPENING SECTION **********************/
+
+.opening {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: drop 1s;
+    transition: opacity 1s ease;
+}
+
+.opening h1 {
+    font-size: 50px;
+    margin: 30px;
+    text-shadow: 2px 2px 3px #f86d70;
+}
+
+.opening button,
+.options button {
+    width: 150px;
+}
+.restart button {
+    width: 100%;
+}
+
+.opening button,
+.options button,
+.restart button {
+    border: 5px solid #3f3d56;
+    transition: background-color 0.3s ease;
+}
+
+.opening button:hover,
+.options button:hover,
+.restart button:hover {
+    background-color: #ffa502;
+}
+
+/********************** MATCH SECTION **********************/
+
+.match {
+    height: 60vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease 0.75s;
+}
+
+.winner {
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 3px #f86d70;
+}
+
+.player-hand {
+    transform: rotateY(180deg);
+}
+
+.restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/********************** JavaScript DOM SECTION **********************/
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+div.fadeFromTop {
+    transform: translateY(0px);
+}
+
+div.reset {
+    opacity: 0;
+}
+
+/********************** RESPONSIVE SECTION **********************/
+
+@media screen and (max-width: 414px) {
+    button {
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .opening h1 {
+        font-size: 35px;
+    }
+
+    .opening button,
+    .options button {
+        width: 110px;
+    }
+
+    .score h1 {
+        font-size: 26px;
+    }
+
+    .player-score p,
+    .computer-score p {
+        font-size: 24px;
+    }
+
+    .match {
+        justify-content: center;
+    }
+
+    .winner {
+        font-size: 35px;
+    }
+
+    .hands {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    .hands img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .opening h1 {
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 14px;
+        height: 40px;
+    }
+    .opening button,
+    .options button {
+        width: 85px;
+    }
+
+    .score h1 {
+        font-size: 22px;
+    }
+
+    .player-score p,
+    .computer-score p {
+        font-size: 20px;
+    }
+
+    .hands img {
+        width: 150px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
+
+/********************** ANIMATIONS SECTION **********************/
+
+@keyframes shakePlayer {
+    0% {
+        transform: rotateY(180deg) rotateZ(0deg);
+    }
+    15% {
+        transform: rotateY(180deg) rotateZ(50deg);
+    }
+    25% {
+        transform: rotateY(180deg) rotateZ(0deg);
+    }
+    35% {
+        transform: rotateY(180deg) rotateZ(50deg);
+    }
+    50% {
+        transform: rotateY(180deg) rotateZ(0deg);
+    }
+    65% {
+        transform: rotateY(180deg) rotateZ(50deg);
+    }
+    75% {
+        transform: rotateY(180deg) rotateZ(0deg);
+    }
+    85% {
+        transform: rotateY(180deg) rotateZ(50deg);
+    }
+    100% {
+        transform: rotateY(180deg) rotateZ(0deg);
+    }
+}
+
+@keyframes shakeComputer {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    15% {
+        transform: rotateZ(50deg);
+    }
+    25% {
+        transform: rotateZ(0deg);
+    }
+    35% {
+        transform: rotateZ(50deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    65% {
+        transform: rotateZ(50deg);
+    }
+    75% {
+        transform: rotateZ(0deg);
+    }
+    85% {
+        transform: rotateZ(50deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
