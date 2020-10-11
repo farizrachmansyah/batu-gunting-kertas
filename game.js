@@ -8,11 +8,15 @@ const game = () => {
         const openingScreen = document.querySelector(".opening");
         const scoreScreen = document.querySelector(".score");
         const matchScreen = document.querySelector(".match");
+        const name = document.querySelector(".player-name");
 
         playBtn.addEventListener("click", () => {
+            const playerName = prompt("Masukkan Nama Kamu :").toUpperCase();
             openingScreen.classList.add("fadeOut");
             scoreScreen.classList.add("fadeFromTop");
             matchScreen.classList.add("fadeIn");
+            
+            name.textContent = playerName;
         });
 
         restartBtn.addEventListener("click", function () {
