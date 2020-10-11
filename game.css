@@ -68,11 +68,12 @@ button {
 /********************** OPENING SECTION **********************/
 
 .opening {
-    height: 50vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 15vh;
     animation: drop 1s;
     transition: opacity 1s ease;
 }
@@ -137,11 +138,10 @@ button {
 
 .footer {
     width: 100%;
-    position: absolute;
-    top: 100%;
-    transform: translateY(-100%);
-    padding: 1rem;
-    text-align: center;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer p {
@@ -244,6 +244,12 @@ div.reset {
 
     .footer p {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 351px) {
+    .opening h1 {
+        font-size: 26px;
     }
 }
 
