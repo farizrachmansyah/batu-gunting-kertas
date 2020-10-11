@@ -46,8 +46,8 @@ const game = () => {
                 const computerNumber = Math.floor(Math.random() * 3);
                 const computerChoise = computerOption[computerNumber];
 
-                playerHand.src = `./assets/batu-gunting-kertas/Batu.png`;
-                computerHand.src = `./assets/batu-gunting-kertas/Batu.png`;
+                playerHand.src = `./assets/Batu.png`;
+                computerHand.src = `./assets/Batu.png`;
 
                 playerHand.style.animation = "shakePlayer 1.5s ease";
                 computerHand.style.animation = "shakeComputer 1.5s ease";
@@ -58,8 +58,8 @@ const game = () => {
                     compareHands(playerChoise, computerChoise);
 
                     // Update Images
-                    playerHand.src = `./assets/batu-gunting-kertas/${this.textContent}.png`;
-                    computerHand.src = `./assets/batu-gunting-kertas/${computerChoise}.png`;
+                    playerHand.src = `./assets/${this.textContent}.png`;
+                    computerHand.src = `./assets/${computerChoise}.png`;
                 }, 1300);
             });
         });
